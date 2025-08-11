@@ -1,0 +1,17 @@
+name: Github Action Workflow Demo
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run a One-line Script
+        run: echo "Hello, World! From Github Action Workflow Demo Backend"
